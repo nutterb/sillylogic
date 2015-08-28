@@ -1,3 +1,6 @@
+[![Travis-CI Build Status](https://travis-ci.org/nutterb/sillylogic.svg?branch=master)](https://travis-ci.org/nutterb/sillylogic)
+[![Coverage Status](https://img.shields.io/coveralls/nutterb/sillylogic.svg)](https://coveralls.io/r/nutterb/sillylogic?branch=master)
+
 sillylogic
 ==========
 
