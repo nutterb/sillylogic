@@ -1,5 +1,5 @@
 Package: sillylogic
-Title: Fun Representations of Boolean Values
+Title: Emote via Logical Constants
 Version: 0.1.0
 Authors@R: person("Benjamin", "Nutter", email = "nutter@battelle.org", role = c("aut", "cre"))
 Description: Inspired by a Twitter discussion, alternate representations of \code{TRUE}
