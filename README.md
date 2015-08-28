@@ -6,6 +6,7 @@ Fun representations of boolean values.
 Inspired by the [discussion on Twitter](https://twitter.com/michaelhoffman/status/630420081042849792), `sillylogic` provides some fun alternatives to use in place of `TRUE` and `FALSE`. Most famously:
 
 ``` r
+devtools::install_github("nutterb/sillylogic")
 library(sillylogic)
 x <- data.frame(letter = letters[1:10],
                 stringsAsFactors = HELLNO)
