@@ -4,7 +4,7 @@
 sillylogic
 ==========
 
-Fun representations of boolean values.
+Emote via Logical Constants
 
 Inspired by the [discussion on Twitter](https://twitter.com/michaelhoffman/status/630420081042849792), `sillylogic` provides some fun alternatives to use in place of `TRUE` and `FALSE`. Most famously:
 
