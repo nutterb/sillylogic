@@ -1,0 +1,59 @@
+---
+output:
+  md_document:
+    variant: markdown_github
+---
+
+[![Coverage Status](https://img.shields.io/coveralls/nutterb/sillylogic.svg)](https://coveralls.io/r/nutterb/sillylogic?branch=master)
+
+# sillylogic
+Fun representations of boolean values.
+
+Inspired by the [discussion on Twitter](https://twitter.com/michaelhoffman/status/630420081042849792), `sillylogic` provides some fun alternatives to use in place of `TRUE` and `FALSE`.  Most famously:
+
+```{r}
+library(sillylogic)
+x <- data.frame(letter = letters[1:10],
+                stringsAsFactors = HELLNO)
+```
+
+Which ensures that strings are not converted to factors when the data frame is assigned.
+
+```{r}
+class(x$letter)
+```
+
+## Available Logical Representations
+
+```{r, echo=FALSE, results='asis'}
+all_silly <- getNamespaceExports("sillylogic")
+all_silly <- all_silly[!all_silly == "surprise_me"]
+silly <- sapply(all_silly, 
+                function(l) eval(parse(text = l)))
+
+sillyTRUE <- sort(names(silly[silly]))
+sillyFALSE <- sort(names(silly[!silly]))
+
+maxlength <- max(length(sillyTRUE), length(sillyFALSE))
+
+sillyTRUE <- c(sillyTRUE, rep("", maxlength - length(sillyTRUE)))
+sillyFALSE <- c(sillyFALSE, rep("", maxlength - length(sillyFALSE)))
+
+Silly <- cbind(sillyTRUE, sillyFALSE)
+colnames(Silly) <- c("TRUE", "FALSE")
+
+knitr::kable(Silly)
+```
+
+And for those who like to live a little dangerously, feel free to use the `surprise_me` function.
+
+```{r}
+set.seed(2)
+x <- data.frame(letter = letters[1:10],
+                stringsAsFactors = surprise_me())
+class(x$letter)
+
+y <- data.frame(letter = letters[1:10],
+                stringsAsFactors = surprise_me())
+class(y$letter)
+```

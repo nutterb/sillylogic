@@ -1,0 +1,11 @@
+Package: sillylogic
+Title: Fun Representations of Boolean Values
+Version: 0.1.0
+Authors@R: person("Benjamin", "Nutter", email = "nutter@battelle.org", role = c("aut", "cre"))
+Description: Inspired by a Twitter discussion, alternate representations of \code{TRUE}
+  and \code{FALSE} are provided.  These may be used to place a little levity in the
+  code, most famously for \code{stringsAsFactors=FALSE}.
+Depends: R (>= 3.1.0)
+License: MIT + file LICENSE
+LazyData: true
+Suggests: testthat
